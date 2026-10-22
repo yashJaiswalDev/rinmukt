@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Rinmukt — track every loan and card EMI in one place and see the day you're debt-free.">
+<title>Rinmukt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Urbanist:wght@400;500;600;700;800&family=Overpass+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="src/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M6 9 Q16 10 26 24' stroke='%232fe07a' stroke-width='3' fill='none'/%3E%3Ccircle cx='26' cy='24' r='3' fill='%232fe07a'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="bgfx" aria-hidden="true"><i class="ember"></i><i class="ledger"></i><i class="counted"></i><i class="missed"></i><i class="free"></i><b></b></div>
+<div id="app"></div>
+
+<div id="story" class="story" data-scene="1" role="region" aria-label="Home" tabindex="-1" hidden>
+  <div class="gl e"></div><div class="gl w"></div><div class="gl g"></div>
+  <div class="st-stage" aria-hidden="true"><div class="st-scale" id="stScale"><div class="st-world">
+    <div class="sc c1" style="--i:1"><div class="sc-in"></div></div>
+    <div class="sc c2" style="--i:2"><div class="sc-in"></div></div>
+    <div class="sc c3" style="--i:3"><div class="sc-in"></div></div>
+    <div class="sc c4" style="--i:4"><div class="sc-in"></div></div>
+    <div class="sc c5" style="--i:5"><div class="sc-in"></div></div>
+    <div class="tot"><div class="k">Principal outstanding</div><div class="big" id="stTotal"></div><div class="two"><div><span class="k">Monthly EMI</span><b id="stMonthly"></b></div><div><span class="k">Loans</span><b id="stLoans"></b></div></div></div>
+    <div class="sheet" id="stSheet"></div>
+    <div class="floor" id="stFloor"></div>
+  </div></div></div>
+  <div class="gl v"></div>
+
+
+  <div class="st-copy" aria-live="polite">
+    <div class="st-sc on" data-s="1"><h2 class="st-h"><span class="ln"><span id="stH1a"></span></span><span class="ln"><span><em id="stH1b"></em></span></span></h2><div class="st-d" id="stD1"></div></div>
+    <div class="st-sc" data-s="2"><h2 class="st-h"><span class="ln"><span>One</span></span><span class="ln"><span><em>ledger.</em></span></span></h2><div class="st-d">Every loan · one screen</div></div>
+    <div class="st-sc" data-s="3"><h2 class="st-h"><span class="ln"><span>Every EMI,</span></span><span class="ln"><span><em>already counted.</em></span></span></h2><div class="st-d row" style="gap:14px;align-items:flex-end"><span class="st-num" id="stCount">0</span><span style="padding-bottom:8px">EMIs paid<br><span id="stSince"></span></span></div></div>
+    <div class="st-sc" data-s="4"><h2 class="st-h"><span class="ln"><span>Miss one,</span></span><span class="ln"><span><em>it shows.</em></span></span></h2><div class="st-d" id="stD4"></div></div>
+    <div class="st-sc" data-s="5"><div class="st-eye" lang="hi" style="letter-spacing:0;font-size:18px;font-weight:500;text-transform:none;color:var(--s-green)">ऋणमुक्त</div><h2 class="st-h"><span class="ln"><span>See the day</span></span><span class="ln"><span><em>you're free.</em></span></span></h2><div class="st-d" id="stFree">Debt-free</div></div>
+  </div>
+
+  <div class="st-foot"><button class="st-next" data-sact="next" aria-label="Next"><span></span></button></div>
+</div>
+
+<script src="src/engine.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

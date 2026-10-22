@@ -1,0 +1,13 @@
+{
+  "name": "rinmukt",
+  "version": "1.0.0",
+  "description": "Track every loan and card EMI in one place and see the day you're debt-free.",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/engine.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
